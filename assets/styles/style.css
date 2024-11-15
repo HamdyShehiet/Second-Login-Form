@@ -25,7 +25,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background:url(assets/images/background.jpg) no-repeat center/cover ;
+    background:url(../images/background.jpg) no-repeat center/cover ;
 }
 form{
     display: flex;
