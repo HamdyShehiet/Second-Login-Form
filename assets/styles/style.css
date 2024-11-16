@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    border: none;
+    list-style: none;
+    font-family: "Open Sans", sans-serif;
+}
+
+:root{
+    --mainBoxColor:#ffffff;
+    --mainPadding:30px 20px;
+    --shadowColor:#383838;
+    --borderColor:rgba(255, 255, 255, 0.76);
+    --buttonColor:rgb(92, 62, 62);
+    --hovBgColor:rgb(199, 198, 198);
+    --hovColor:rgb(43, 42, 42);
+
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:url(/assets/images/background.jpg) no-repeat center/cover ;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: var(--mainPadding);
+    gap: 20px;
+    max-width: 400px;
+    width: 100%;
+    background-color: rgb(0, 0, 0,0.1);
+    border: 1px solid var(--borderColor);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 6px;
+    box-shadow: 0 2px 4px var(--shadowColor);
+}
+form h2{
+    text-align: center;
+    font-weight: 700;
+    color: var(--mainBoxColor);
+}
+
+.username-field ,.password-field{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding:0 10px;
+    margin: 5px 0;
+    position: relative;
+    width: 100%;
+}
+.username-field input ,.password-field input{
+    width: 100%;
+    padding: 12px;
+    border-radius: 30px;
+    background-color: transparent;
+    color: var(--mainBoxColor);
+    font-size: .9em;
+    border: 1px solid var(--borderColor);
+}
+.username-field input::placeholder ,.password-field input::placeholder{
+    color: var(--mainBoxColor);
+}
+.username-field i ,.password-field i{
+    position: absolute;
+    right: 34px;
+    color: var(--mainBoxColor);
+}
+.Ins-field{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 10px;
+}
+.Ins-field .checkbox{
+    display: inline-flex;
+    gap: 5px;
+}
+.Ins-field .checkbox label{
+    font-size: .8em;
+    color: var(--mainBoxColor);
+}
+.Ins-field a{
+    font-size: .8em;
+    color: var(--mainBoxColor);
+}
+input[type="submit"]{
+    display: inline-block;
+    background-color: var(--mainBoxColor);
+    color: var(--buttonColor);
+    padding: 8px;
+    font-size: 1em;
+    font-weight: 700;
+    border-radius: 30px;
+    width: calc(100% - 20px);
+    align-self: center;
+}
+input[type="submit"]:hover{
+    background-color:rgb(199, 198, 198);
+    color: rgb(43, 42, 42);
+    scale: 1.05;
+}
+.new-account{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.new-account p{
+    font-size: .8em;
+    font-weight: 500;
+
+    color: var(--mainBoxColor);
+}
+.new-account a{
+    color: var(--mainBoxColor);
+    font-size: .9em;
+    font-weight: 600;
+    }
+
+
+
+
+@media screen and (max-width:400px){
+        form{
+            border-radius: 0;
+        }
+    }
+@media screen and (max-width:300px){
+        form{
+            border-radius: 0;
+        }
+        .Ins-field {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            padding: 0 10px;
+        }
+        .new-account{
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0 10px;
+        }
+    }
